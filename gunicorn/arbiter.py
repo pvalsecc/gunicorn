@@ -256,6 +256,7 @@ class Arbiter(object):
 
     def handle_term(self):
         "SIGTERM handling"
+        self.stop(True)
         raise StopIteration
 
     def handle_int(self):
